@@ -1,24 +1,17 @@
-# ft_strs_to_tab
+# Strings to structure array
 
-## Description
+**42 C fundamentals** · Converts a string array into records containing the original pointer, its length and a separately allocated copy.
 
-This repository contains a C program that converts an array of strings into an array of structures, with each structure containing the original string, its length, and a copy of the string. This project demonstrates memory management in C, including dynamic memory allocation (`malloc`), and deep copying of strings.
+## Build and use
 
-The project includes:
-- A function to calculate the length of a string (`ft_strlen`).
-- A function to copy a string (`ft_strcpy`).
-- A function to convert an array of strings into an array of structures (`ft_strs_to_tab`).
+```sh
+cc -Wall -Wextra -Werror -c ft_strs_to_tab.c
+```
 
-This is particularly useful for applications that need to manipulate strings and their metadata collectively.
+The command builds an object file; this repository has no standalone main program.
 
-## Structure Definition
+## Implementation note
 
-The `t_stock_str` structure is defined as follows in the `ft_stock_str.h` header file:
+Function-only source; see ft_stock_str.h. The caller owns each allocated copy and the returned array.
 
-```c
-typedef struct s_stock_str
-{
-    int     size;
-    char    *str;
-    char    *copy;
-}   t_stock_str;
+Source: [`ft_strs_to_tab.c`](ft_strs_to_tab.c). [License](LICENSE).
